@@ -1,3 +1,24 @@
+<div>
+  Title: <input type="text" #title>
+</div>
+<div>
+  Author: <input type="text" #author>
+</div>
+<div>
+  Price: <input type="text" #price>
+</div>
+<div>
+  Rating: <select #rating>
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+</div>
+
+<button (click)="print(title, author, rating, price)">click</button>
+
 <table *ngIf="cart.items.length">
   <tr>
     <th>Item</th>
@@ -15,12 +36,7 @@
     <td></td>
   </tr>
 </table>
-<div 
-  *ngFor="let book of books" 
-  class="book" 
-  [hidden]="book.title == 1"
-  [class.high]="book.rating == 5"
->
+<div *ngFor="let book of books" class="book" [hidden]="book.title == 1" [class.high]="book.rating == 5">
   <div class="title">{{book.title}}</div>
   <div class="author">{{book.author}}</div>
   <div>{{book.price}}</div>

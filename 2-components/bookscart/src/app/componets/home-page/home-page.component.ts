@@ -66,4 +66,18 @@ export class HomePageComponent implements OnInit {
     this.cart.totalPrice += book.price;    
   }
 
+  print(title, author, price, rating) {
+    let newBook = new Book(
+      title.value,
+      author.value,
+      +price.value,
+      +rating.value
+    );
+    this.books.push(newBook);
+    title.value = null;
+    author.value = null;
+    price.value = null;
+    rating.value = null;
+  }
+
 }

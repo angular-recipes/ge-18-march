@@ -15,6 +15,7 @@ export class Cart {
     }
 
     findItemByName(name: string) {
-        return this.items.find(i =>  i.name == name)
+        return this.items.find(i => i.name == name);
     }
+
 }
