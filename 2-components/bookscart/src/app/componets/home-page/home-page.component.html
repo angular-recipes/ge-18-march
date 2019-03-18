@@ -17,7 +17,11 @@
     </select>
 </div>
 
-<button (click)="print(title, author, rating, price)">click</button>
+<button 
+  (click)="addBook(title, author, price, rating)"
+>
+  click
+</button>
 
 <table *ngIf="cart.items.length">
   <tr>
