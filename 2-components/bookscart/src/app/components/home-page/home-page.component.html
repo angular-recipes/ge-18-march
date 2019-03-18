@@ -40,8 +40,8 @@
     <td></td>
   </tr>
 </table>
-<div *ngFor="let book of books" class="book" [hidden]="book.title == 1" [class.high]="book.rating == 5">
-  <div class="title">{{book.title}}</div>
+<div *ngFor="let book of books;let i=index" class="book" [hidden]="book.title == 1" [class.high]="book.rating == 5">
+  <a routerLink="/book/{{i+1}}" class="title">{{book.title}}</a>
   <div class="author">{{book.author}}</div>
   <div>{{book.price}}</div>
   <div>{{book.rating}}</div>

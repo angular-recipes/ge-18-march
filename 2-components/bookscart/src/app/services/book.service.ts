@@ -39,6 +39,10 @@ export class BookService {
     return this.books;
   }
 
+  getBookById(id: number) : Book {
+    return this.books[id-1];
+  }
+
   rateUp(book: Book) {
     if(book.rating < 5)
       book.rating++;
