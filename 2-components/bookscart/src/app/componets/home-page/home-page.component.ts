@@ -1,3 +1,5 @@
+import { Item } from './../../models/item';
+import { Cart } from './../../models/cart';
 import { Book } from './../../models/book';
 import { Component, OnInit } from '@angular/core';
 
@@ -8,6 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePageComponent implements OnInit {
   books: Book[];
+  cart: Cart;
 
   constructor() {
     this.books = [
@@ -36,6 +39,7 @@ export class HomePageComponent implements OnInit {
         5
       )
     ];
+    this.cart = new Cart();
   }
 
   ngOnInit() {
@@ -49,6 +53,17 @@ export class HomePageComponent implements OnInit {
   rateDown(book: Book) {
     if(book.rating > 1)
       book.rating--;
+  }
+
+  addToCart(book: Book) {
+    //first check if item is alread there
+    let item = this.cart.findItemByName(book.title);
+    if(item) {
+      item.qty++;
+    } else {
+      this.cart.addItem(book.title, book.price);
+    }
+    this.cart.totalPrice += book.price;    
   }
 
 }

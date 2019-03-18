@@ -1,6 +1,20 @@
-<div *ngIf="3==3">Hello</div>
-<div [hidden]="3==3">World</div>
-
+<table *ngIf="cart.items.length">
+  <tr>
+    <th>Item</th>
+    <th>Price</th>
+    <th>Qty</th>
+  </tr>
+  <tr *ngFor="let item of cart.items">
+    <td>{{item.name}}</td>
+    <td>{{item.price}}</td>
+    <td>{{item.qty}}</td>
+  </tr>
+  <tr>
+    <td>Total Price</td>
+    <td>{{cart.totalPrice}}</td>
+    <td></td>
+  </tr>
+</table>
 <div 
   *ngFor="let book of books" 
   class="book" 
@@ -14,5 +28,6 @@
   <div>
     <button (click)="rateUp(book)">&uarr;</button>
     <button (click)="rateDown(book)">&darr;</button>
+    <button (click)="addToCart(book)">+</button>
   </div>
 </div>
