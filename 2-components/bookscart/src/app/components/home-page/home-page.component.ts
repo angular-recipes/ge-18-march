@@ -13,6 +13,7 @@ import { Component, OnInit } from '@angular/core';
 export class HomePageComponent implements OnInit {
   books: Book[];
   color = 'blue';
+  today = new Date();
 
   constructor(
     private bookService: BookService,

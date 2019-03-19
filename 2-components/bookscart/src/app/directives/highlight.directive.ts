@@ -20,7 +20,4 @@ export class HighlightDirective implements OnInit{
   @HostListener('mouseleave') onMouseLeave() {
     this.el.nativeElement.style.color = null;
   }
-
-
-
 }

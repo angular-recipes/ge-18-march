@@ -13,6 +13,7 @@ import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.
 import { AddBookFormPageComponent } from './components/add-book-form-page/add-book-form-page.component';
 import { LessThanDirective } from './validators/less-than.directive';
 import { HighlightDirective } from './directives/highlight.directive';
+import { StarsPipe } from './pipes/stars.pipe';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { HighlightDirective } from './directives/highlight.directive';
     ShoppingCartComponent,
     AddBookFormPageComponent,
     LessThanDirective,
-    HighlightDirective
+    HighlightDirective,
+    StarsPipe
   ],
   imports: [
     BrowserModule,
