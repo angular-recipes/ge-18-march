@@ -1,0 +1,38 @@
+<form #addBookForm="ngForm" (ngSubmit)="save()">
+  <div>
+    Title:
+    <input #title="ngModel" name="title" type="text" [(ngModel)]="newBook.title" required minlength="4"/>
+    <div *ngIf="title.invalid && (title.touched || title.dirty)">
+      <div *ngIf="title.errors.required" class="error">
+        Title is required
+      </div>
+      <div *ngIf="title.errors.minlength" class="error">
+        Min 4 characters
+      </div>
+    </div>
+  </div>
+  <div>
+    Author:
+    <input #author="ngModel" name="author" type="text" [(ngModel)]="newBook.author" required/>
+    <div *ngIf="author.invalid && (author.touched || author.dirty)">
+        <div *ngIf="author.errors.required" class="error">
+          Author is required
+        </div>
+      </div>
+  </div>
+  <div>
+    Price:
+    <input name="price" type="number" [(ngModel)]="newBook.price" />
+  </div>
+  <div>
+    Rating:
+    <select name="rating" type="number" [(ngModel)]="newBook.rating">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </div>
+  <button type="submit" [disabled]="addBookForm.invalid">Add Book</button>
+</form>
