@@ -18,4 +18,8 @@ export class Cart {
         return this.items.find(i => i.name == name);
     }
 
+    getTotalItems() : number {
+        return this.items.reduce((res, i) => res + i.qty, 0);
+    }
+
 }

@@ -7,6 +7,8 @@ import { HomePageComponent } from './components/home-page/home-page.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { BookDetailsComponent } from './components/book-details/book-details.component';
+import { AddBookPageComponent } from './components/add-book-page/add-book-page.component';
+import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { BookDetailsComponent } from './components/book-details/book-details.com
     HomePageComponent,
     AboutComponent,
     ContactComponent,
-    BookDetailsComponent
+    BookDetailsComponent,
+    AddBookPageComponent,
+    ShoppingCartComponent
   ],
   imports: [
     BrowserModule,

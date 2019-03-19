@@ -12,14 +12,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePageComponent implements OnInit {
   books: Book[];
-  cart: Cart;
 
   constructor(
     private bookService: BookService,
     private cartService: CartService  
   ) {
     this.books = this.bookService.getBooks();
-    this.cart = this.cartService.getCart();
   }
 
   ngOnInit() {
@@ -36,19 +34,4 @@ export class HomePageComponent implements OnInit {
   addToCart(book: Book) {
     this.cartService.addToCart(book);
   }
-
-  addBook(title, author, price, rating) {
-    let newBook = new Book(
-      title.value,
-      author.value,
-      +price.value,
-      +rating.value
-    );
-    this.bookService.addBook(newBook);
-    title.value = null;
-    author.value = null;
-    price.value = null;
-    rating.value = null;
-  }
-
 }
