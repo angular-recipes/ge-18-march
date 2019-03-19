@@ -12,11 +12,11 @@ export class BookService {
   }
 
   getBooks() {
-    return this.http.get<Book>(this.url);
+    return this.http.get<Book[]>(this.url);
   }
 
   getBookById(id: number) {
-    return this.http.get(this.url + id);
+    return this.http.get<Book>(this.url + id);
   }
 
   rateUp(book: Book) {
