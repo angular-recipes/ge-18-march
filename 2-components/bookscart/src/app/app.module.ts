@@ -11,6 +11,7 @@ import { BookDetailsComponent } from './components/book-details/book-details.com
 import { AddBookPageComponent } from './components/add-book-page/add-book-page.component';
 import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
 import { AddBookFormPageComponent } from './components/add-book-form-page/add-book-form-page.component';
+import { LessThanDirective } from './validators/less-than.directive';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { AddBookFormPageComponent } from './components/add-book-form-page/add-bo
     BookDetailsComponent,
     AddBookPageComponent,
     ShoppingCartComponent,
-    AddBookFormPageComponent
+    AddBookFormPageComponent,
+    LessThanDirective
   ],
   imports: [
     BrowserModule,

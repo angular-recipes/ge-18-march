@@ -12,7 +12,7 @@ export class AddBookFormPageComponent implements OnInit {
   newBook: Book;
   constructor(
     private bookService: BookService,
-    private router: Router  
+    private router: Router
   ) { }
 
   ngOnInit() {
