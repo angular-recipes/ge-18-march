@@ -1,4 +1,4 @@
-import { Http } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
 import { Book } from './../models/book';
 import { Injectable } from '@angular/core';
 
@@ -8,7 +8,7 @@ import { Injectable } from '@angular/core';
 export class BookService {
   private url = 'http://localhost:3000/books/';
 
-  constructor(private http: Http) { 
+  constructor(private http: HttpClient) { 
   }
 
   getBooks() {
@@ -28,6 +28,7 @@ export class BookService {
   rateDown(book: Book) {
     if(book.rating > 1)
       book.rating--;
+    return this.http.put(this.url + book.id, book);
   }
 
   addBook(book: Book) {

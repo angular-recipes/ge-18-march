@@ -20,7 +20,7 @@ export class BookDetailsComponent implements OnInit {
     let bookId = +this.route.snapshot.paramMap.get('id');
     this.bookService
       .getBookById(bookId)
-      .subscribe(res => this.book = res.json());
+      .subscribe(res => this.book = res);
   }
 
   goHome() {

@@ -1,4 +1,3 @@
-import { Http } from '@angular/http';
 import { CartService } from './../../services/cart.service';
 import { BookService } from './../../services/book.service';
 import { Item } from './../../models/item';
@@ -18,8 +17,7 @@ export class HomePageComponent implements OnInit {
 
   constructor(
     private bookService: BookService,
-    private cartService: CartService,
-    private http: Http
+    private cartService: CartService
   ) {
 
   }
@@ -27,7 +25,7 @@ export class HomePageComponent implements OnInit {
   ngOnInit() {
     this.bookService
       .getBooks()
-      .subscribe(res => this.books = res.json());
+      .subscribe(res => this.books = res);
   }
 
   rateUp(book: Book) {
