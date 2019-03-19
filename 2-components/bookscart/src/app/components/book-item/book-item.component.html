@@ -1,0 +1,13 @@
+<div class="book" [hidden]="book.title == 1" [class.high]="book.rating == 5">
+    <a routerLink="/book/{{book.id}}" class="title">
+      {{book.title | titlecase}}
+    </a>
+    <div class="author" [highlight]="color">{{book.author}}</div>
+    <div>{{book.price | currency:'EUR'}}</div>
+    <div>{{book.rating | stars:'^'}}</div>
+    <div>
+      <button (click)="handleRateUpBtnClick()">&uarr;</button>
+      <button (click)="handleRateDownBtnClick()">&darr;</button>
+      <button (click)="handleAddToCartBtnClick()">+</button>
+    </div>
+  </div>

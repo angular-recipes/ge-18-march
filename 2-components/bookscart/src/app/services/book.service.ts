@@ -12,7 +12,7 @@ export class BookService {
   }
 
   getBooks() {
-    return this.http.get(this.url);
+    return this.http.get<Book>(this.url);
   }
 
   getBookById(id: number) {

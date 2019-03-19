@@ -15,6 +15,7 @@ import { AddBookFormPageComponent } from './components/add-book-form-page/add-bo
 import { LessThanDirective } from './validators/less-than.directive';
 import { HighlightDirective } from './directives/highlight.directive';
 import { StarsPipe } from './pipes/stars.pipe';
+import { BookItemComponent } from './components/book-item/book-item.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { StarsPipe } from './pipes/stars.pipe';
     AddBookFormPageComponent,
     LessThanDirective,
     HighlightDirective,
-    StarsPipe
+    StarsPipe,
+    BookItemComponent
   ],
   imports: [
     BrowserModule,
