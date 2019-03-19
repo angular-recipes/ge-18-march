@@ -1,0 +1,25 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "The Alchemist",
+      "author": "Paulo Cohelo",
+      "price": 12,
+      "rating": 3
+    },
+    {
+      "id": 2,
+      "title": "Five point someone",
+      "author": "Chetan Bhagat",
+      "price": 16,
+      "rating": 5
+    },
+    {
+      "title": "Power of now",
+      "author": "Eckhart tolle",
+      "price": 23,
+      "rating": 4,
+      "id": 3
+    }
+  ]
+}
